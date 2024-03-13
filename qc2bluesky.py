@@ -12,7 +12,9 @@ try:
 except ImportError:  # Python 3
     import urllib.request as urllib2
 
-# the bulk of this code is taken from https://stackoverflow.com/a/35104372 with Bluesky-specific tweaks
+# code credits: https://stackoverflow.com/a/35104372 / https://gist.github.com/vhxs/20f2fbc0da08c07317f9d935dbc1f765
+# to-do: clickable links, hashtags
+
 # edit values as needed
 
 # Fetch the current time
@@ -20,7 +22,7 @@ except ImportError:  # Python 3
 now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
 
-url = 'https://stream.qcindie.com/;'  # radio stream
+url = 'https://YOUR RADIO STREAM.url'  # radio stream
 encoding = 'iso-8859-1' # default: iso-8859-1 for mp3 and utf-8 for ogg streams
 request = urllib2.Request(url, headers={'Icy-MetaData': 1})  # request metadata
 response = urllib2.urlopen(request)
