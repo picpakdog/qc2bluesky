@@ -16,10 +16,6 @@ Create an app password through https://bsky.app/settings/app-passwords . You'll 
 
 Edit qc2bluesky.py with your info, and set up a Cron job to run it as often as you like.
 
-# To-do
-
-Clickable hashtags and links to QCIndie.com.
-
 # Credits
 
 Based off of jfs' code at https://stackoverflow.com/a/35104372 and vhxs' code at https://gist.github.com/vhxs/20f2fbc0da08c07317f9d935dbc1f765
