@@ -48,15 +48,15 @@ print(title.decode(encoding, errors='replace'))
 
 def parse_tags(results: str) -> List[Dict]:
     spans = []
-    tag_regex = rb"(#+[a-zA-Z0-9(_)]{1,})"
+    tag_regex = rb"(^|\s)#([A-Za-z_][A-Za-z0-9_]*)"
     text_bytes = results.encode("UTF-8")
     print(text_bytes)
     for t in re.finditer(tag_regex, text_bytes):
         spans.append(
             {
                 "start": t.start(1),
-                "end": t.end(1),
-                "tag": t.group(1).decode("UTF-8"),
+                "end": t.end(2),
+                "tag": t.group(2).decode("UTF-8"),
             }
         )
     return spans
