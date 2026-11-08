@@ -2,7 +2,6 @@ from __future__ import print_function
 import requests
 import os
 from datetime import datetime, timezone
-from atproto import Client
 from typing import List, Dict
 
 import re
