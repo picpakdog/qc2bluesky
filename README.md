@@ -8,10 +8,6 @@ This is a Python script to automatically post what's playing on a Icecast/Shoutc
 
 # Install/Setup
 
-Install Atproto via pip:
-
-    pip install atproto
-
 Create an app password through https://bsky.app/settings/app-passwords . You'll want to use this as your password when editing your credentials.
 
 Edit qc2bluesky.py with your info, and set up a Cron job to run it as often as you like.
